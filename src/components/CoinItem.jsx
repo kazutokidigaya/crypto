@@ -47,7 +47,7 @@ const CoinItem = ({ coin }) => {
         </Link>
       </td>
       <td>{coin.symbol.toUpperCase()}</td>
-      <td>${coin.current_price.toLocaleString()}</td>
+      <td>Rs. {coin.current_price.toLocaleString()}</td>
       <td>
         {coin.price_change_percentage_24h > 0 ? (
           <p className="text-green-600">
@@ -60,10 +60,10 @@ const CoinItem = ({ coin }) => {
         )}
       </td>
       <td className="w-[180px] hidden md:table-cell">
-        ${coin.total_volume.toLocaleString()}
+        Rs. {coin.total_volume.toLocaleString()}
       </td>
       <td className="w-[180px] hidden sm:table-cell">
-        ${coin.market_cap.toLocaleString()}
+        Rs. {coin.market_cap.toLocaleString()}
       </td>
       <td>
         <Sparklines data={coin.sparkline_in_7d.price}>
